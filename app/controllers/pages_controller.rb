@@ -3,7 +3,7 @@ class PagesController < ApplicationController
     @title = "title"
 
     @user = User.all
-
+    
     render json:{ user: @user.inspect}
   end
 end

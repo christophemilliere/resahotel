@@ -2,7 +2,10 @@ Rails.application.routes.draw do
 
   root "pages#home"
 
-  resources :users
+  resources :users do
+    resources :bookings
+  end
+  resources :rooms
   #create user
   # match 'users/' => "users#create", via: [:get, :post]
 
